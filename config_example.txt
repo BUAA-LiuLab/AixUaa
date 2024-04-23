@@ -1,0 +1,71 @@
+#[data]
+TYPE_MS2=mgf
+PATH_MS2= #VIP
+PATH_FASTA= #VIP
+PATH_FASTA_EXPORT=./protein_index/ #VIP
+PATH_RESULT_EXPORT=./result/ #VIP
+
+#[biology]
+NAME_ENZYME=trypsin KR C #use ';' to set multiple enzymes
+TYPE_DIGEST=0 #0 for specific; 1 for semi-specific; 2 for non-specific
+NUMBER_MAX_MISS_CLV=3
+
+NAME_MOD_FIX= #VIP, use ';' to set multiply fixed modifications
+NAME_MOD_VAR=Oxidation[M] #VIP, use ';' to set multiply variable modifications
+NUMBER_MAX_MOD=3 #Maximum of variable modification in one peptide sequence (not consider the fixed modifications)
+
+UAA_SEQ= #VIP
+UAA_AA=U
+UAA_LEN_LOW=4
+UAA_LEN_UP=20
+UAA_MASS_LOW=4
+UAA_MASS_UP=20
+UAA_NAME_MOD_FIX=
+UAA_NAME_MOD_VAR=
+UAA_COM= #VIP
+UAA_NAME_ENZYME=trypsin KR C # use ';' to set multiply enzymes
+UAA_TYPE_DIGEST=0 #0 for specific; 1 for semi-specific; 2 for non-specific
+UAA_NUMBER_MAX_MISS_CLV=0
+UAA_LINKED_AA= #VIP, beta peptide is linked with which amino acids in alpha peptide, it can be multiply amino acids (e.g., ACDEF)
+
+#[mass spectrometry]
+TYPE_TOL_PRECURSOR=ppm
+PPM_TOL_PRECURSOR=20
+TYPE_TOL_FRAGMENT=ppm
+PPM_TOL_FRAGMENT=20
+TYPE_ACTIVATION=HCD
+
+#[performance]
+NUMBER_THREAD=8
+TYPE_THREAD=0 #0 is for multi-process (high speed but use more memory); 1 is for multi-thread (low speed but use less memory)
+NUMBER_SELECT_PEAK=200
+NUMBER_SPECTRUM=10000
+LEN_MAX_PROTEIN=100000
+MASS_PEP_LOW=400
+MASS_PEP_UP=10000
+LEN_PEP_LOW=6
+LEN_PEP_UP=100
+INDEX_SPLIT_MASS=100 #create one pkl file for each 100Da ([0, 100], [100, 200], ..., [9900, 10000])
+NUMBER_TOP_RESULT=10 #output top-10 peptides for each spectrum
+
+MULTI_MASS=1 #use mass hash (mass*MUTLI_MASS) to retrive peptide, spectrum or peak, this value of creating peptide index and searching mgf must be same.
+TYPE_TASK=1
+TYPE_FILTER_BETA=1 #whether to filter spectrum which has not matched ion when matching with beta peptide (default is 1)
+NUMBER_PEAK_BETA=1 #when 'TYPE_FILTER_BETA' is set as 1, then this value is valid,          it will filter spectrum where the number of matched beta ions is less than 'NUMBER_PEAK_BETA' (default is 1)
+
+OPEN_SEARCH_SINGLE=0 # open search for single peptide (beta), 0 means it don't support open search while 1 means it supports
+MASS_WINDOW_BETA=300 #when open search only for single beta peptide, the mass window size of open search is 300 Da
+PATH_PFIND_RESULT= #path_mgf of pfind result file; if not exists, it can be empty
+
+#[filter]
+FDR_PSM=0.05
+
+#[ini]
+PATH_INI_ELEMENT=./ini/element.ini
+PATH_INI_AA=./ini/aa.ini
+PATH_INI_MOD=./ini/modification.ini
+
+#[advance]
+CLV_UAA_COM= # the element composition of UAA after cleave
+CLV_UAA_LINKED_AA= # specify the linked amino acids
+CLV_UAA_LINKED_AA_MASS_CHANGE=0 # the mass change of linked amino acids after cleave

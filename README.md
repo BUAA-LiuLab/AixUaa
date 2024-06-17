@@ -1,5 +1,7 @@
 # AixUaa
 
-Please download the latest version of AixUaa in the release area on the right.
+Please download the latest version of AixUaa in the release area on the right. You can also download AixUaa from http://123.56.120.73/software/aixuaa.html
 
 Proximity-based chemical cross-linkable unnatural amino acids (Uaas) have been widely used in the development of covalent drugs and identifications of protein interactors, such as proteins, DNA, RNA and carbohydrates. Site-specific mapping of Uaas induced cross-linking with mass spectrometry (MS) is helpful in characterizing binding sites and non-specific targets of covalent drugs and enhancing the specificity of protein partners identification. However, it is challenging to perform high-throughput identification of cross-linking products due to the complexities of protein samples and the data analysis processes. Therefore, enrichable Uaas will effectively reduce the complexities of protein samples and simplify data analysis. Although several enrichable Uaas have been reported, few cross-linked peptides were identified from mammalian cell samples with these Uaas. Here we developed an enrichable and multiple amino acids reactive Uaa, eFSY, and demonstrated that eFSY is MS cleavable when eFSY-Lys and eFSY-His are the cross-linking products. An identification software, AixUaa was developed to decipher eFSY mass cleavable data. We systematically identified direct interactomes of Thioredoxin 1 (Trx1) and Selenoprotein M (SELM) with eFSY and AixUaa.
+
+
